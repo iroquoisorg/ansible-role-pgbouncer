@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: pgbouncer
   author: iroquoisorg
   description: role for pgbouncer setup
   license: BSD
