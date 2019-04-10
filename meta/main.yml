@@ -2,7 +2,6 @@
 galaxy_info:
   author: iroquoisorg
   description: role for pgbouncer setup
-  company: your company (optional)
   license: BSD
   min_ansible_version: 2.5.4
   platforms:
