@@ -4,13 +4,13 @@
   apt:
     name: postgresql-client
     state: present
-    update_cache: yes
+    update_cache: true
 
 - name: Install pgbouncer
   apt:
     name: pgbouncer
     state: present
-    update_cache: yes
+    update_cache: true
 
 - name: Copy pgbouncer configuration file
   template:
