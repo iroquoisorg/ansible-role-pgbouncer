@@ -1,0 +1,33 @@
+---
+# tasks file for pgbouncer
+- name: Install PostgreSQL client
+  apt:
+    name: postgresql-client
+    state: present
+    update_cache: yes
+
+- name: Install pgbouncer
+  apt:
+    name: pgbouncer
+    state: present
+    update_cache: yes
+
+- name: Copy pgbouncer configuration file
+  template:
+    src: pgbouncer.ini.j2
+    dest: /etc/pgbouncer/pgbouncer.ini
+    owner: postgres
+    group: postgres
+    mode: 0640
+  notify:
+    - restart pgbouncer
+
+- name: Copy userlist file
+  template:
+    src: userlist.txt.j2
+    dest: /etc/pgbouncer/userlist.txt
+    owner: postgres
+    group: postgres
+    mode: 0640
+  notify:
+    - restart pgbouncer
