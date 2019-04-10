@@ -1,0 +1,8 @@
+---
+# defaults file for pgbouncer
+pgbouncer_listen_address: 127.0.0.1
+pgbouncer_listen_port: 6432
+pgbouncer_users:
+  - { username: "pgbouncer", password: "pgbouncer1234" }
+pgbouncer_pools:
+  - { name: "pgbouncer", dbname: "dbname=pgbouncer", host: "host=pgbouncer.local", port: "port=5432", }
