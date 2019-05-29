@@ -10,4 +10,3 @@ def test_env_vars_added(host):
     f = host.file('/etc/pgbouncer/pgbouncer.ini')
 
     assert f.exists
-    assert f.contains("VARIABLE='variable value'")

@@ -3,7 +3,7 @@
   hosts: all
   become: true
   vars:
-    env_vars:
-      VARIABLE: 'variable value'
+    pgbouncer_users:
+      - { username: "root", password: "root" }
   roles:
     - role: ansible-role-pgbouncer
