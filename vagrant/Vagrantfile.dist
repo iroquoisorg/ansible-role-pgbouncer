@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
 
     config.vm.provider :virtualbox do |v|
         v.gui = false
-        v.name = "ansible-role-env"
+        v.name = "ansible-role-pgbouncer"
         v.memory = 512
     end
 
@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
     config.vm.provision "ansible_local" do |ansible|
         ansible.version = "2.5.4"
         ansible.install_mode = "pip"
-        ansible.playbook = "ansible-role-env/molecule/default/playbook.yml"
+        ansible.playbook = "ansible-role-pgbouncer/molecule/default/playbook.yml"
         ansible.become = true
     end
 
