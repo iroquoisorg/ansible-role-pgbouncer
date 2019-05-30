@@ -3,7 +3,6 @@
   hosts: all
   become: true
   vars:
-    pgbouncer_server_tls_ca_file: /etc/ssl/crt.crt
     pgbouncer_users:
       - { username: "root", password: "root" }
   roles:
